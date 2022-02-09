@@ -1,0 +1,23 @@
+# syntax=docker/dockerfile:1
+#Deriving the latest base image
+FROM python:3.8-slim-buster
+
+
+# Any working directory can be chosen as per choice like '/' or '/home' etc
+# i have chosen /app
+WORKDIR /app
+
+#Copy requirements.txt and install all the dependencies
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+
+#to COPY the remote files at working directory in container
+#Put files and folders into .dockerignore file if you dont want them to be copied
+COPY . .
+# Now the structure looks like this '/app/*'
+
+
+#CMD instruction should be used to run the software
+#contained by your image, along with any arguments.
+CMD [ "python", "./alert.py"]
