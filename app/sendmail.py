@@ -35,4 +35,4 @@ def email_test():
     message_alert = "This is an automated email test from your Website Alert application. Email is successfully delivered. Congrats!"
     send_alert(subject_alert, message_alert, recipient)
 
-email_test() #Uncomment to send a test email to yourself or somebody (set test-eamil address in config.yaml file)
+""" email_test() """ #Uncomment to send a test email to yourself or somebody (set test-eamil address in config.yaml file)

@@ -1,11 +1,12 @@
 email:
-  smtp: mail.kristijan-projects.xyz
-  port: 587
-  account: alert@kristijan-projects.xyz
-  password: .D,C{=MY7P(a<w;A
-  myemail: work@kristijan.me #Main email account where all the alerts will be sent
+  #Settings for the email account from which the emails will be send
+  smtp: <your-email-server> #For example mail.domain.com
+  port: <port> #537 for example
+  account: <email-address> #Email account from which the emails will be send
+  password: <password>
+  myemail: <email-address> #Main email account where all the alerts will be sent
   test-mail:
-    email-address: work@kristijan.me #Email address where the test email will be sent
+    email-address: <email-address> #Email address where the test email will be sent
 
 script-settings:
   check-time: 300 #Minimum check time needs to be set to 60 and needs to be whole number
